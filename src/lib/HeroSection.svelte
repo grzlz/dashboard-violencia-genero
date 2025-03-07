@@ -45,26 +45,26 @@
     }
 </script>
 
+<div class="w-100 text-center py-3 bg-primary text-white">
+    <h1 class="h4 fw-bold m-0">Violencia de género en Quintana Roo</h1>
+</div>
 <div class="container-fluid vh-100 d-flex flex-column justify-content-center bg-light">
-    <!-- Barra superior -->
-    <div class="row w-100 text-center py-3 bg-primary text-white">
-        <h1 class="h4 fw-bold m-0">Violencia de género en Quintana Roo</h1>
+<!-- Barra superior -->
+
+<!-- Contenido principal -->
+<div class="d-flex flex-column justify-content-center align-items-start flex-grow-1 ps-4">
+    <!-- Carrusel de texto -->
+    <div class="p-4 border-4 border-primary mb-4 text-start" style="max-width: 90%;">
+        <p class="lead mb-0">{currentText}</p>
     </div>
 
-    <!-- Contenido principal -->
-    <div class="d-flex flex-column justify-content-center align-items-start flex-grow-1 ps-4">
-        <!-- Carrusel de texto -->
-        <div class="p-4 bg-white border-start border-4 border-primary shadow-sm mb-4 text-start" style="max-width: 90%;">
-            <p class="lead mb-0">{currentText}</p>
-        </div>
-
-        <!-- Botón centrado -->
-        <div class="d-flex justify-content-center w-100 mt-3">
-            <button class="btn btn-pink fw-bold text-center" on:click={handleExploreClick}>
-                Explora los datos
-            </button>
-        </div>
+    <!-- Botón centrado -->
+    <div class="d-flex justify-content-center w-100 mt-3">
+        <button class="btn btn-pink fw-bold text-center" on:click={handleExploreClick}>
+            Explora los datos
+        </button>
     </div>
+</div>
 </div>
 
 <style>
@@ -72,17 +72,26 @@
         background-color: #d6336c;
         color: white;
         border: none;
+        padding: 12px 24px;
+        font-size: 1rem;
+        border-radius: 5px;
+        text-transform: uppercase;
+        font-weight: bold;
+        transition: background-color 0.3s;
     }
 
     :global(.btn-pink:hover) {
         background-color: #b02658;
     }
 
-    :global(.border-primary) {
-        border-color: #7b2cbf !important;
-    }
-
     :global(.bg-primary) {
         background-color: #7b2cbf !important;
     }
+
+    p.lead {
+        color: #333;
+        font-size: 1.2rem;
+        line-height: 1.5;
+    }
 </style>
+
