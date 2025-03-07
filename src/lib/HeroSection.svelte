@@ -47,7 +47,7 @@
 
 
 
-<div class="w-100 text-center py-3 bg-primary text-white">
+<div class="w-100 text-center py-3 text-white" style="background-color: #5a189a;">
     <h1 class="h4 fw-bold m-0">Violencia de género en Quintana Roo</h1>
 </div>
 
@@ -60,11 +60,13 @@
         </div>
         
 
-        <!-- Botón centrado -->
-        <div class="d-flex justify-content-center w-100">
-            <button class="btn btn-pink fw-bold text-center" on:click={handleExploreClick}>
+        <div class="d-flex flex-column align-items-center gap-2 w-100">
+            <button class="btn btn-pink fw-bold text-center w-100" style="max-width: 300px;" on:click={handleExploreClick}>
                 Explora los datos
             </button>
+            <a class="btn btn-purple fw-bold text-center w-100" style="max-width: 300px;" href="https://semujeres.qroo.gob.mx/" target="_blank">
+                Pide ayuda
+            </a>
         </div>
     </div>
 </div>
@@ -91,14 +93,21 @@
         background-color: #b02658;
     }
 
-    :global(.bg-primary) {
-        background-color: #7b2cbf !important;
+    :global(.btn-purple) {
+        background-color: #5a189a;
+        color: white;
+        border: none;
+        padding: 12px 24px;
+        font-size: 1rem;
+        border-radius: 5px;
+        text-transform: uppercase;
+        font-weight: bold;
+        transition: background-color 0.3s;
     }
 
-    p.lead {
-        color: #333;
-        font-size: 1.2rem;
-        line-height: 1.5;
+    :global(.btn-purple:hover) {
+        background-color: #3c096c;
     }
 </style>
+
 
