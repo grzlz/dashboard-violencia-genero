@@ -2,61 +2,63 @@
     import { onMount } from 'svelte';
 
     let texts = [
-        "Violación simple: Cuando alguien obliga a otra persona (con o sin violencia) a tener una relación sexual con penetración, sin su consentimiento.",
-        "Abuso sexual: Cuando alguien sin consentimiento y con contacto físico directo toca partes íntimas (senos, glúteos, genitales) de la víctima o la obliga a tocarlas.",
-        "Feminicidio: Es el asesinato de una mujer por razones de género."
+        "Violación simple: cuando alguien obliga a otra persona (con o sin violencia) a tener una relación sexual con penetración, sin su consentimiento.",
+        "Abuso sexual: cuando alguien sin consentimiento y con contacto físico directo toca partes íntimas (senos, glúteos, genitales) de la víctima o la obliga a tocarlas.",
+        "Feminicidio: es el asesinato de una mujer por razones de género. Se considera feminicidio cuando la víctima es asesinada por ser mujer y existen elementos como antecedentes de violencia, amenazas, abuso sexual, mutilaciones, o exposición pública del cuerpo."
     ];
 
     let currentText = "";
     let textIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
-    let speed = 10; // velocidad base
+    let speed = 50; // velocidad base
 
-    // Función para controlar el efecto de escritura y borrado
     function typeEffect() {
         const fullText = texts[textIndex];
-        
+
         if (isDeleting) {
             currentText = fullText.substring(0, charIndex--);
-            speed = 10; // más rápido al borrar
+            speed = 10; // borrar más rápido
         } else {
             currentText = fullText.substring(0, charIndex++);
-            speed = 25; // más lento al escribir
+            speed = 20; // escribir un poco más lento
         }
 
         if (!isDeleting && charIndex === fullText.length + 1) {
             isDeleting = true;
-            speed = 2000; // Pausa antes de borrar
+            speed = 2000; // pausa larga antes de borrar
         } else if (isDeleting && charIndex === 0) {
             isDeleting = false;
-            textIndex = (textIndex + 1) % texts.length; // cambia al siguiente texto
+            textIndex = (textIndex + 1) % texts.length;
         }
 
         setTimeout(typeEffect, speed);
     }
 
-    // Al montar el componente, inicia el efecto
     onMount(() => {
         typeEffect();
     });
-
 </script>
 
 <style>
     .carousel {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
         font-family: 'Arial', sans-serif;
-        white-space: nowrap;
+        white-space: normal; /* Permitir salto de línea */
         overflow: hidden;
-        border-right: 2px solid #666;
-        padding-right: 5px;
-        animation: blink-caret 0.75s step-end infinite;
+        max-width: 100%; /* Responsivo al contenedor */
+        line-height: 1.5; /* Mejor legibilidad */
+        padding: 10px;
+        box-sizing: border-box;
+        border-left: 4px solid #666; /* Puedes usarlo como estilo visual */
     }
 
-    @keyframes blink-caret {
-        from, to { border-color: transparent }
-        50% { border-color: #666; }
+    /* Estilo responsivo extra (opcional) */
+    @media (max-width: 768px) {
+        .carousel {
+            font-size: 1rem;
+            padding: 8px;
+        }
     }
 </style>
 
