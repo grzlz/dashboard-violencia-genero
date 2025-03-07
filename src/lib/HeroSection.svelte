@@ -55,7 +55,7 @@
     <!-- Contenido principal -->
     <div class="d-flex flex-column align-items-start ps-4 pt-4">
         <!-- Carrusel de texto -->
-        <div class="p-4 mt-3 mb-4 text-start" style="height: 120px; overflow: hidden;">
+        <div class="p-4 mt-3 mb-4 text-start" style="height: 360px; overflow: hidden;">
             <p class="lead mb-0">{currentText}</p>
         </div>
         
