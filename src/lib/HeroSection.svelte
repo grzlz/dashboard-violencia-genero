@@ -3,8 +3,11 @@
     import { onMount } from 'svelte';
 
     let texts = [
-        "Violación simple: cuando alguien obliga a otra persona (con o sin violencia) a tener una relación sexual con penetración, sin su consentimiento.",
+        "Acoso sexual: cuando una persona realiza insinuaciones, comentarios, gestos o comportamientos de naturaleza sexual no deseados que incomodan, intimidan o humillan a la víctima. Puede incluir contacto físico no consentido, exhibicionismo, solicitudes de favores sexuales o mensajes con connotaciones sexuales, tanto en espacios públicos como privados.",
+        "El acoso sexual no siempre implica contacto físico.",
+        "El abuso sexual sí incluye contacto físico directo sin consentimiento.",
         "Abuso sexual: cuando alguien sin consentimiento y con contacto físico directo toca partes íntimas (senos, glúteos, genitales) de la víctima o la obliga a tocarlas.",
+        "Violación simple: cuando alguien obliga a otra persona (con o sin violencia) a tener una relación sexual con penetración, sin su consentimiento.",
         "Feminicidio: es el asesinato de una mujer por razones de género. Se considera feminicidio cuando la víctima es asesinada por ser mujer y existen elementos como antecedentes de violencia, amenazas, abuso sexual, mutilaciones, o exposición pública del cuerpo."
     ];
 
