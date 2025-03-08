@@ -1,4 +1,5 @@
 <script>
+	import { goto } from '$app/navigation';
     import { onMount } from 'svelte';
 
     let texts = [
@@ -41,7 +42,7 @@
 
     function handleExploreClick() {
         console.log('Explora los datos clickeado');
-        // Aquí puedes hacer un scroll automático o link a otra sección.
+        goto('/explore');
     }
 </script>
 
