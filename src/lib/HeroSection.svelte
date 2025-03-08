@@ -3,6 +3,7 @@
     import { onMount } from 'svelte';
 
     let texts = [
+        "Abuso psicológico: cuando alguien manipula, humilla, intimida o controla a otra persona de manera sistemática, afectando su autoestima y bienestar emocional. Puede incluir insultos, amenazas, aislamiento, gaslighting y otras formas de violencia emocional que buscan someter a la víctima.",
         "Acoso sexual: cuando una persona realiza insinuaciones, comentarios, gestos o comportamientos de naturaleza sexual no deseados que incomodan, intimidan o humillan a la víctima. Puede incluir contacto físico no consentido, exhibicionismo, solicitudes de favores sexuales o mensajes con connotaciones sexuales, tanto en espacios públicos como privados.",
         "El acoso sexual no siempre implica contacto físico.",
         "El abuso sexual sí incluye contacto físico directo sin consentimiento.",
@@ -25,7 +26,7 @@
             speed = 10;
         } else {
             currentText = fullText.substring(0, charIndex++);
-            speed = 20;
+            speed = 25;
         }
 
         if (!isDeleting && charIndex === fullText.length + 1) {
